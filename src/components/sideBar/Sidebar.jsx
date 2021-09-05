@@ -14,6 +14,7 @@ import {
     WorkOutline,
 } from "@material-ui/icons";
 import { makeStyles } from "@material-ui/styles";
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles({
     sidebarIcon: {
@@ -48,14 +49,20 @@ const Sidebar = () => {
                 <div className={styles.menu}>
                     <h3 className={styles.title}>Quick Menu</h3>
                     <ul className={styles.list}>
-                        <li className={styles.listItem}>
-                            <PermIdentity className={classes.sidebarIcon} />
-                            Users
-                        </li>
-                        <li className={styles.listItem}>
-                            <Storefront className={classes.sidebarIcon} />
-                            Products
-                        </li>
+                        <Link to='/users'>
+                            <li className={styles.listItem}>
+                                <PermIdentity className={classes.sidebarIcon} />
+                                Users
+                            </li>
+                        </Link>
+
+                        <Link to='/products'>
+                            <li className={styles.listItem}>
+                                <Storefront className={classes.sidebarIcon} />
+                                Products
+                            </li>
+                        </Link>
+
                         <li className={styles.listItem}>
                             <BarChart className={classes.sidebarIcon} />
                             Reports

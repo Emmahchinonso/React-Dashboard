@@ -56,7 +56,7 @@ const UserList = () => {
             renderCell: ({ row }) => {
                 return (
                     <>
-                        <Link to={`/user/${row.id}`}>
+                        <Link to={`/users/${row.id}`}>
                             <button className={styles.userListEdit}>
                                 Edit
                             </button>
