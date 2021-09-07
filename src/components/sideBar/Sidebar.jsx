@@ -32,10 +32,15 @@ const Sidebar = () => {
                 <div className={styles.menu}>
                     <h3 className={styles.title}>Dashboard</h3>
                     <ul className={styles.list}>
-                        <li className={`${styles.listItem} ${styles.active}`}>
-                            <LineStyle className={classes.sidebarIcon} />
-                            Home
-                        </li>
+                        <Link to='/'>
+                            <li
+                                className={`${styles.listItem} ${styles.active}`}
+                            >
+                                <LineStyle className={classes.sidebarIcon} />
+                                Home
+                            </li>
+                        </Link>
+
                         <li className={styles.listItem}>
                             <Timeline className={classes.sidebarIcon} />
                             Analytics
